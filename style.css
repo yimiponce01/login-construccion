@@ -10,7 +10,15 @@ body {
 .binary {
     font-size: 20px;
     color: rgba(255, 255, 255, 0.05); 
+    padding: 20px 20px 40px 20px;
 }
+
+.binary-1 {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.05); 
+    padding: 20px 20px 40px 20px;
+}
+
 
 
 .container-login {
@@ -47,13 +55,33 @@ body {
     height: 100%;
 }
 
-.left-col .first-content {
-    display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    padding: 40px;
+.child-line {
+    width: 100%;
+    height: 2px;
+    margin-top: 1px;
+    background: #808080;
 }
 
+.left-col .first-content {
+    height: 100%;
+}
+
+.left-col .first-content .content-binary {
+    height: 50%;
+}
+
+.left-col .first-content .content-binary-1{
+    display: flex;
+    align-items: initial;
+    padding: 0px;
+}
+
+
+.left-col .first-content .content-binary-2{
+    display: flex;
+    align-items: end;
+    padding: 0px;
+}
 
 .left-col .second-content {
     height: 100%;
@@ -63,8 +91,8 @@ body {
 .left-col .second-content .content-icons {
     display: flex;
     height: 50%;
-    justify-content: center; /* Centrado vertical */
-    align-items: center; /* Centrado horizontal */
+    justify-content: center; 
+    align-items: center; 
 }
 
 
@@ -77,10 +105,30 @@ body {
 }
 
 .right-col .second-content {
+    height: 100%;
+}
+
+.right-col .second-content .content-binary {
+    height: 50%;
+}
+
+.right-col .second-content .content-binary-1{
     display: flex;
-    flex-direction: column; 
-    justify-content: space-between;
-    padding: 40px;
+    align-items: initial;
+    padding: 0px;
+}
+
+.right-col .second-content .content-binary-1{
+    display: flex;
+    align-items: initial;
+    padding: 0px;
+}
+
+
+.right-col .second-content .content-binary-2{
+    display: flex;
+    align-items: end;
+    padding: 0px;
 }
 
 
