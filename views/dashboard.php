@@ -1,18 +1,15 @@
 <?php
-session_start();
 
-if (!isset($_SESSION["txtusername"])) {
-    header("Location: http://127.0.0.1/login-construccion/index.php");
-}
+    session_start();
 
+    if (!isset($_SESSION["txtusername"])) {
+        header('Location: '.get_UrlBase('index.php'));
+    }
 
-
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
+    
 ?>
-
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +18,7 @@ if (!isset($_SESSION["txtusername"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/estilodashboard.css">
+    <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
 </head>
 
 <body>
@@ -37,7 +34,7 @@ if (!isset($_SESSION["txtusername"])) {
                 <li><a href="?opcion=ingresar">ingresar</a></li>
                 <li><a href="?opcion=modificar">modificar</a></li>
                 <li><a href="?opcion=eliminar">eliminar</a></li>
-                <li><a href="http://127.0.0.1/login-construccion/logout.php">salir</a></li>
+                <li><a href="<?php echo get_controllers('logout.php')?>">salir</a></li>
             </ul>
         </div>
 

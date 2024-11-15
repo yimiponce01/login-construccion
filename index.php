@@ -1,10 +1,16 @@
+<?php
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="<?php echo get_UrlBase('./css/style.css') ?>">
     <title>Document</title>
 </head>
 
@@ -13,6 +19,7 @@
     <?php
 
     session_start();
+    session_unset();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -22,13 +29,12 @@
         //echo $_POST["txtusername"];
         //echo "<br>";
         //echo $_POST["txtpassword"];
-    
+
         $v_username = "";
         $v_password = "";
 
         if (isset($_POST["txtusername"])) {
             $v_username = $_POST["txtusername"];
-
         }
         if (isset($_POST["txtpassword"])) {
             $v_password = $_POST["txtpassword"];
@@ -38,23 +44,20 @@
             $_SESSION["txtusername"] = $v_username;
             $_SESSION["txtpassword"] = $v_password;
 
-            
 
 
-           header("Location: http://127.0.0.1/login-construccion/dashboard.php");
 
+            header('Location: '.get_views('dashboard.php'));
         } else {
 
-            header("Location: http://127.0.0.1/login-construccion/claveequivocada.php");
-
+            header('Location: '.get_views('claveequivocada.php'));
         }
-         
     }
 
-    
+
     if (isset($_SESSION["txtusername"])) {
-        header("Location: http://127.0.0.1/login-construccion/dashboard.php");
-     }
+        header('Location: '.get_views('dashboard.php'));
+    }
     ?>
 
     <div class="container-login">
