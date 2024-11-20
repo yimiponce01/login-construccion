@@ -22,10 +22,12 @@ class conexion {
         $this->userdb = $userdb;
         $this->paswordb = $paswordb;
         $this->charset = $charset;
+
+        $this->conectar();
     
     }    
 
-    private function conectar(){
+    public function conectar(){
         $dsn = "mysql:host={$this->host};dbname={$this->namedb};charset={$this->charset}";
 
         try {
