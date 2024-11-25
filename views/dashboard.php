@@ -7,7 +7,7 @@ if (!isset($_SESSION["txtusername"])) {
 }
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
+
 
 ?>
 
@@ -21,52 +21,56 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
     <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
 </head>
 
-<body>
+<body> 
+            <header class="header">BIENVENIDO AL SISTEMA</header>
+            <aside class="container">
+                <div class="menu menu-vertical">
+                    <h3>MENU</h3>
+                    <ul>
+                        <li><a href="?opcion=ver">Ver</a></li>
+                        <li><a href="?opcion=ingresar">Ingresar</a></li>
+                        <li><a href="?opcion=modificar">Modificar</a></li>
+                        <li><a href="?opcion=eliminar">Eliminar</a></li>
+                        <li><a href="<?php echo get_controllers('logout.php') ?>">salir</a></li>
+                    </ul>
+                </div>
+            </aside>
 
-    <div class="header">BIENVENIDO AL SISTEMA</div>
-
-    <div class="container">
-        <div class="menu">
-            <h3>MENU</h3>
-            <ul>
-                <li><a href="?opcion=nicio">inicio</a></li>
-                <li><a href="?opcion=ver">ver</a></li>
-                <li><a href="?opcion=ingresar">ingresar</a></li>
-                <li><a href="?opcion=modificar">modificar</a></li>
-                <li><a href="?opcion=eliminar">eliminar</a></li>
-                <li><a href="<?php echo get_controllers('logout.php') ?>">salir</a></li>
-            </ul>
-        </div>
-
-        <div class="contenido">
-            <?php
-            if (isset($_GET["opcion"])) {
-                $opcion = $_GET["opcion"];
-                switch ($opcion) {
-                    case 'inicio':
-                        echo "<H1> BIENVENIDO AL SISTEMA <H1>";
-                        break;
-                    case 'ver':
-                        echo "<iframe src='". get_views("verdatos.php"). "' ></iframe>";
-                        break;
-                    case 'ingresar':
-                        echo "<iframe src='". get_views(arg1: "ingresardatos.php"). "' ></iframe>";
-                        break;
-                    case 'modificar':
-                        echo "<iframe src='". get_views(arg1: "modificardatos.php"). "' ></iframe>";
-                        break;
-                    case 'eliminar':
-                        echo "<iframe src='". get_views(arg1: "eliminardatos.php"). "' ></iframe>";
-                        break;
+        <main class="content">
+            
+            <div class="contenido">
+                <?php
+                if (isset($_GET["opcion"])) {
+                    $opcion = $_GET["opcion"];
+                    switch ($opcion) {
+                        /*case '':
+                            <p>hola</p>
+                            break;*/
+                        case 'ver':
+                            echo "<iframe src='" . get_controllers("controladorusuario.php") . "' ></iframe>";
+                            break;
+                        case 'ingresar':
+                            echo "<iframe src='" . get_views(arg1: "ingresardatos.php") . "' ></iframe>";
+                            break;
+                        case 'modificar':
+                            echo "<iframe src='" . get_views(arg1: "modificardatos.php") . "' ></iframe>";
+                            break;
+                        case 'eliminar':
+                            echo "<iframe src='" . get_views(arg1: "eliminardatos.php") . "' ></iframe>";
+                            break;
+                    }
+                }else {
+                    // Mensaje inicial cuando no se ha seleccionado ninguna opción
+                    echo "<p>¡Bienvenido! Seleccione una opción del menú para comenzar.</p>";
                 }
+                ?>
 
-                echo $opcion;
-            }
-            ?>
+            </div>
+        </main>
 
-        </div>
-
-    </div>
+        <footer class="footer">
+            <p>&copy; 2024 Mi Sitio Web. <a href="#">Términos y condiciones</a> | <a href="#">Autor: Yimi Kevin Ponce Rojas</a></p>
+        </footer>
 
 </body>
 

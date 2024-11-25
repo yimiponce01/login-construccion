@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $tmpdatpassword = $_POST["datpassword"];
     $tmpdatperfil = $_POST["datperfil"];
 
-    $conexion = new conexion($host, $namedb, $userdb, $paswordb);
+    $conexion = new conexion(); //($host, $namedb, $userdb, $paswordb);
     $pdo = $conexion->obtenerConexion();
 
     try{
@@ -32,16 +32,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 
 ?>
+<head>
+<link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
+</head>
 
-<form action="" method="POST">
-    <label for="datusuario">Usuario</label>
-        <input type="text" name="datusuario" id="datusuario">
-    <br>
-    <label for="datpasword">password</label>
-        <input type="password" name="datpassword" id="datpassword">
-    <br>
-    <label for="datperfil">perfil</label>
-        <input type="datperfil" name="datperfil" id="datperfil">
-    <br>
-    <button type="submit">registrar usuario</button>
-</form>
+    <form action="" method="POST">
+    <h1 style="text-align: center;">Ingresa un Usuario</h1>
+
+        <label for="datusuario">Usuario</label>
+            <input type="text" name="datusuario" id="datusuario">
+        
+        <label for="datpasword">Password</label>
+            <input type="password" name="datpassword" id="datpassword">
+        
+        <label for="datperfil">Perfil</label>
+            <input type="datperfil" name="datperfil" id="datperfil">
+        
+        <button type="submit">Registrar</button>
+    </form>

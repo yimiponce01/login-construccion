@@ -1,265 +1,249 @@
 body {
-    background-color: #1C1C1C; /* Color de fondo oscuro */
-    color: #fff;
-    font-family: Arial, sans-serif;
-    overflow: hidden; /* Evita el scroll si no es necesario */
-    width: 100%;
-    height: 100vh;
+  background-color: #1c1c1c; /* Color de fondo oscuro */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Evita el scroll si no es necesario */
+  width: 100%;
+  height: 100vh;
 }
 
 .binary {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.05); 
-    padding: 20px 20px 40px 20px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.05);
+  padding: 20px 20px 40px 20px;
 }
 
 .binary-1 {
-    font-size: 20px;
-    color: rgba(255, 255, 255, 0.05); 
-    padding: 20px 20px 40px 20px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.05);
+  padding: 20px 20px 40px 20px;
 }
 
-
-
 .container-login {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .container-login [class*="col"] {
-    text-align: initial;
-    padding: 0;
+  text-align: initial;
+  padding: 0;
 }
 
-
 .left-col {
-    width: 35%;
-    display: flex;
-    height: 100%;
-
+  width: 35%;
+  display: flex;
+  height: 100%;
 }
 
 .center-col {
-    width: 30%;
-    height: 100%;
+  width: 30%;
+  height: 100%;
 }
 
 .right-col {
-    display: flex;
-    width: 35%;
-    height: 100%;
+  display: flex;
+  width: 35%;
+  height: 100%;
 }
 
 .line .child-line {
-    width: 100%;
-    height: 4px;
-    margin-top: 2px;
-    background: linear-gradient(to right, #808080, transparent);
+  width: 100%;
+  height: 4px;
+  margin-top: 2px;
+  background: linear-gradient(to right, #808080, transparent);
 }
 
-
 .line-vertical {
-    height: 100%;
-    display: flex;
-    align-items: end;
-    border-radius: 10px;
+  height: 100%;
+  display: flex;
+  align-items: end;
+  border-radius: 10px;
 }
 
 .line-vertical .child-line {
-    width: 4px;
-    margin-left: 2px;
-    height: 75%;
-    background: linear-gradient(to bottom, transparent, #808080);
+  width: 4px;
+  margin-left: 2px;
+  height: 75%;
+  background: linear-gradient(to bottom, transparent, #808080);
 }
 
-
 .left-col .first-content {
-    height: 100%;
+  height: 100%;
 }
 
 .left-col .first-content .content-binary {
-    height: 50%;
-    display: inline-block;
-    font-family: monospace; 
-    font-size: 16px;
-    background: linear-gradient(to right, #808080, transparent);
-    -webkit-background-clip: text;
-    color: transparent; 
+  height: 50%;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 16px;
+  background: linear-gradient(to right, #808080, transparent);
+  
+  color: transparent;
 }
 
-.left-col .first-content .content-binary-1{
-    display: flex;
-    align-items: initial;
-    padding: 0px;
+.left-col .first-content .content-binary-1 {
+  display: flex;
+  align-items: initial;
+  padding: 0px;
 }
 
-
-.left-col .first-content .content-binary-2{
-    display: flex;
-    align-items: end;
-    padding: 0px;
+.left-col .first-content .content-binary-2 {
+  display: flex;
+  align-items: end;
+  padding: 0px;
 }
 
 .left-col .second-content {
-    height: 100%;
+  height: 100%;
 }
-
 
 .left-col .second-content .content-icons {
-    display: flex;
-    height: 50%;
-    justify-content: center; 
-    align-items: center; 
+  display: flex;
+  height: 50%;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .center-col {
-    display: flex;
-    height: 100%;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .right-col .second-content {
-    height: 100%;
+  height: 100%;
 }
 
 .right-col .second-content .content-binary {
-    height: 50%;
-    display: inline-block;
-    font-family: monospace; 
-    font-size: 16px;
-    background: linear-gradient(to right, #808080, transparent); 
-    -webkit-background-clip: text;
-    color: transparent; 
+  height: 50%;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 16px;
+  background: linear-gradient(to right, #808080, transparent);
+  
+  color: transparent;
 }
 
-.right-col .second-content .content-binary-1{
-    display: flex;
-    align-items: initial;
-    padding: 0px;
+.right-col .second-content .content-binary-1 {
+  display: flex;
+  align-items: initial;
+  padding: 0px;
 }
 
-
-.right-col .second-content .content-binary-2{
-    display: flex;
-    align-items: end;
-    padding: 0px;
+.right-col .second-content .content-binary-2 {
+  display: flex;
+  align-items: end;
+  padding: 0px;
 }
-
 
 .right-col .first-content {
-    height: 100%;
-
+  height: 100%;
 }
 
-
 .right-col .first-content .content-icons {
-    display: flex;
-    height: 50%;
-    justify-content: center; /* Centrado vertical */
-    align-items: center; /* Centrado horizontal */
+  display: flex;
+  height: 50%;
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
 }
 
 .icon {
-    width: 100px;
-    height: 100px; 
-    border: 7px solid #808080; 
-    border-radius: 50%;
-    padding: 0px;
+  width: 100px;
+  height: 100px;
+  border: 7px solid #808080;
+  border-radius: 50%;
+  padding: 0px;
 }
 
-
-
 .body-login {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: 10; /* Asegura que esté por encima de container-login */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10; /* Asegura que esté por encima de container-login */
 }
 
 .content-login .title {
-    display: flex;
-    font-size: 40px;
+  display: flex;
+  font-size: 40px;
 }
 
 .content-login .sub-title {
-    display: flex;
-    font-size: 25px;
+  display: flex;
+  font-size: 25px;
 }
 
 .input-group {
-    margin-bottom: 15px;
-    text-align: left;
+  margin-bottom: 15px;
+  text-align: left;
 }
 
 .input-group input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    border: none;
-    background-color: #555;
-    color: #fff;
-    font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: #555;
+  color: #fff;
+  font-size: 16px;
 }
 
 .group-buttons {
-    width: 100%;
-    display: flex;
-    gap: 10px; 
-    align-items: center;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 [class*="button"] {
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .remember-button {
-    flex: 1;
-    background-color: rgba(0, 0, 0, 0.8);
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .login-button {
-    flex: 1;
-    background-color: #00aaff;
+  flex: 1;
+  background-color: #00aaff;
 }
 
-
 .content-horizontal {
-    display: flex;
-    width: 90%;
-    justify-content: space-between;
-    margin: auto;
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin: auto;
 }
 
 [class*="content-draw"] {
-    color: #808080;
-    font-weight: bold;
-    width: 40%;
+  color: #808080;
+  font-weight: bold;
+  width: 40%;
 }
 
 .content-draw::before {
-    content: "O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O";
+  content: "O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O";
 }
 
 .content-draw-min::before {
-    content: "o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o ";
+  content: "o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o ";
 }

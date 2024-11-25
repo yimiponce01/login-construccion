@@ -12,14 +12,14 @@ if (!isset($_SESSION["txtusername"])) {
 require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
 
-$conexion = new conexion($host, $namedb, $userdb, $paswordb);
+$conexion = new conexion();
 $pdo = $conexion->obtenerConexion();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tmpdatusuario = $_POST["datusuario"];
 
 
-    $conexion = new conexion($host, $namedb, $userdb, $paswordb);
+    $conexion = new conexion();
     $pdo = $conexion->obtenerConexion();
 
 
@@ -58,9 +58,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
+<head>
+<link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
+</head>
+
 <form action="" method="POST">
-    <label for="">Que usuario deseas modificar</label>
+<h1 style="text-align: center;">Modifica un Usuario</h1>
+    <label for="">Usuario</label>
     <input type="text" name="datusuario" id="datusuario">
     <br>
-    <button type="submit">Buscar usuario</button>
+    <button type="submit">Buscar</button>
 </form>

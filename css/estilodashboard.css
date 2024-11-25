@@ -1,59 +1,255 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+
 body {
-    background-color: azure;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Flexbox para alinear menú y contenido en fila */
+  flex-direction: row;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 80px;
+  
 }
 
 .header {
-    width: 100%;
-    background-color: #f0e68c;
-    text-align: center;
-    padding: 20px;
-    font-size: 2rem;
-    font-weight: bold;
-    border-bottom: 2px solid #ccc;
+  height: 80px;
+  width: 100%;
+  background-color: #00005a;
+  /*background: linear-gradient(to bottom, #2e85ff, #6998ff, #8fabff, #aebfff, #cbd4ff);*/
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: bold;
+  border-bottom: 2px solid #ccc;
+  position: fixed; /* Fija el encabezado en la parte superior */
+  top: 0;
+  z-index: 10;
 }
 
-.menu {
-    width: 100%;
-    background-color: burlywood;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+
+aside.container {
+  margin-top: 4.1px;
+  width: 190px; /* Ancho del menú */
+  background-color: white; /* Fondo del menú */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Bordes redondeados */
+  padding: 10px; /* Espaciado interno */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra */
+  height: calc(
+    100vh - 150px
+  ); /* Altura dinámica dejando espacio para el encabezado */
+  overflow-y: auto; /* Agrega scroll si el contenido del menú excede la altura */
+  position: relative;
 }
 
-.menu ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+aside.container .menu.menu-vertical {
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos estén en columna */
+  align-items: flex-start; /* Alinea el contenido al inicio */
+  height: 100%;
 }
 
-.menu ul li {
-    margin: 0;
-    font-size: 1.2rem;
+aside.container h3 {
+  margin: 0 0 10px 0; /* Espaciado inferior del título */
+  width: 100%; /* Asegura que el título ocupe todo el ancho del contenedor */
+  text-align: center; /* Centra el texto */
+  font-size: 1.5rem;
 }
 
-.menu ul li a {
-    color: black;
-    text-decoration: none;
-    padding: 10px 20px;
-    transition: color 0.3s ease;
+aside.container ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  margin: 0;
+  padding: 0;
+  width: 100%; /* Ocupa todo el ancho */
 }
 
-.menu ul li a:hover {
-    color: darkred;
+aside.container ul li {
+  width: 100%; /* Asegura que cada botón ocupe todo el ancho */
+  margin-bottom: 10px;
 }
+
+aside.container ul li a {
+  display: block;
+  padding: 10px;
+  background-color: #f9f9f9; /* Fondo claro para los botones */
+  color: black;
+  text-decoration: none;
+  border-radius: 3px; /* Bordes redondeados */
+  transition: background-color 0.3s ease;
+}
+
+aside.container ul li a:hover {
+  background-color: #007bff; /* Fondo azul al pasar el mouse */
+  color: white;
+}
+
+
+/* Estilo del formulario */
+form {
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  align-items: center; /* Centra horizontalmente */
+  width: 300px; /* Ancho fijo del formulario */
+  margin: 0 auto; /* Centra el formulario en la página */
+  padding: 5px; /* Espaciado interno */
+  background: none; /* Sin fondo */
+  border: none; /* Sin bordes */
+  gap: 1.5rem; /* Espaciado entre los campos */
+}
+
+/* Estilo de los labels */
+form label {
+  font-size: 0.9rem; /* Texto ligeramente más pequeño */
+  font-weight: bold;
+  color: #333333; /* Color del texto */
+  width: 100%; /* Asegura que el texto ocupe todo el ancho del formulario */
+  text-align: left; /* Alinea el texto a la izquierda */
+  margin-bottom: -10px; /* Acerca el texto al input */
+}
+
+/* Estilo de los inputs */
+form input {
+  width: 100%; /* Ocupa todo el ancho del formulario */
+  padding: 10px; /* Espaciado interno */
+  font-size: 1rem; /* Tamaño del texto */
+  border: 1px solid #ccc; /* Borde ligero */
+  border-radius: 3px; /* Bordes ligeramente redondeados */
+  outline: none; /* Sin borde azul al enfocar */
+}
+
+form input:focus {
+  border-color: #007bff; /* Color del borde al enfocar */
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Efecto de enfoque */
+}
+
+/* Estilo del botón */
+form button {
+  background-color: #00005a; /* Naranja vibrante */
+  color: #ffffff; /* Texto blanco */
+  border: none;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%; /* Ocupa todo el ancho */
+  border-radius: 3px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #007bff; /* Naranja más oscuro */
+}
+
+/* Estilo del contenedor principal */
+.contenido {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  text-align: center; /* Asegura que el texto también esté centrado */
+  overflow: hidden;
+}
+
+/* Contenedor principal (Main) */
+main.content {
+  margin-left: 95px; /* Aumenta el espacio a la derecha del menú */
+  margin-top: 5px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: calc(100% - 550px); /* Ajusta dinámicamente el ancho */
+  height: calc(100vh - 140px); /* Calcula la altura dinámica */
+  overflow-y: auto;
+  display: block;
+}
+
+/* Contenido interno */
+.contenido iframe {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Ocupa todo el alto disponible */
+  border: none; /* Sin bordes */
+  overflow-x: hidden;
+}
+
+
+h2.titulo-tabla {
+  text-align: center;
+  font-size: 2rem; /* Tamaño de fuente más grande */
+  font-weight: bold; /* Negrita */
+  left: 260px;
+  position: relative;
+  color: #000000; /* Azul oscuro */
+  margin-bottom: 30px; /* Espacio debajo del título */
+  
+}
+
+.user-table {
+  width: 140%; /* Reduce el ancho de la tabla */
+  margin: 0 auto; /* Centra la tabla horizontalmente */
+  font-size: 1rem; /* Ajusta el tamaño del texto */
+  text-align: center; /* Alinea el texto a la izquierda */
+  left: 190px;
+  position: relative;
+}
+
+.user-table th,
+.user-table td {
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Bordes de las celdas */
+  text-align: center;
+}
+
+.user-table th {
+  background-color: #f4f4f4; /* Fondo gris claro para encabezados */
+  font-weight: bold; /* Negrita */
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Fondo claro para filas pares */
+}
+
+.user-table tr:hover {
+  background-color: #f1f1f1; /* Fondo al pasar el cursor */
+}
+
+/* Estilo del footer */
+.footer {
+  background-color: #00005a; /* Fondo del footer */
+  color: white; /* Color del texto */
+  text-align: center; /* Centra el contenido */
+  padding: 10px; /* Espaciado interno */
+  font-size: 0.9rem; /* Tamaño del texto */
+  position: fixed; /* Fija el footer en la parte inferior */
+  bottom: 0; /* Ubicación en la parte inferior */
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 100; /* Asegura que esté encima de otros elementos */
+}
+
+.footer a {
+  color: white; /* Color de los enlaces */
+  text-decoration: none; /* Quita el subrayado */
+  margin: 0 5px; /* Espaciado entre enlaces */
+}
+
+.footer a:hover {
+  color: #e6e6ff; /* Color al pasar el mouse */
+}
+
+
+
+
+
+
+
+

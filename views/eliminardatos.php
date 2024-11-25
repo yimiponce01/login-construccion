@@ -12,13 +12,13 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/etc/config.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
     require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
     
-    $conexion = new conexion($host,$namedb,$userdb,$paswordb);
+    $conexion = new conexion();
     $pdo = $conexion->obtenerConexion();
 
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $tmpdatusuario = $_POST["datusuario"];
     
-        $conexion = new conexion($host, $namedb, $userdb, $paswordb);
+        $conexion = new conexion();
         $pdo = $conexion->obtenerConexion();
     
         try{
@@ -35,9 +35,14 @@ require_once $_SERVER['DOCUMENT_ROOT']. '/etc/config.php';
 
 ?>
 
+<head>
+<link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
+</head>
+
 <form action="" method="POST">
-    <label for="">A quien debo eliminar </label>
+<h1 style="text-align: center;">Elimina un Usuario</h1>
+    <label for="">Usuario</label>
     <input type="text" name="datusuario" id="datusuario">
     <br>
-    <button type="submit">Eliminar usuario</button>
+    <button type="submit">Eliminar</button>
 </form>
