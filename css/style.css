@@ -1,178 +1,37 @@
 body {
-  background-color: #1c1c1c; /* Color de fondo oscuro */
+  background: url('../img/fondologin.png') no-repeat center center fixed;
+  background-size: 1550px 705px; /* Ajusta la imagen dentro del body, manteniendo proporciones */
   color: #fff;
   font-family: Arial, sans-serif;
   overflow: hidden; /* Evita el scroll si no es necesario */
   width: 100%;
   height: 100vh;
-}
-
-.binary {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.05);
-  padding: 20px 20px 40px 20px;
-}
-
-.binary-1 {
-  font-size: 20px;
-  color: rgba(255, 255, 255, 0.05);
-  padding: 20px 20px 40px 20px;
-}
-
-.container-login {
-  position: relative;
-  width: 100%;
-  height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-}
-
-.container-login [class*="col"] {
-  text-align: initial;
+  margin: 0;
   padding: 0;
 }
 
-.left-col {
-  width: 35%;
-  display: flex;
-  height: 100%;
-}
 
-.center-col {
-  width: 30%;
-  height: 100%;
-}
-
-.right-col {
-  display: flex;
-  width: 35%;
-  height: 100%;
-}
-
-.line .child-line {
-  width: 100%;
-  height: 4px;
-  margin-top: 2px;
-  background: linear-gradient(to right, #808080, transparent);
-}
-
-.line-vertical {
-  height: 100%;
-  display: flex;
-  align-items: end;
-  border-radius: 10px;
-}
-
-.line-vertical .child-line {
-  width: 4px;
-  margin-left: 2px;
-  height: 75%;
-  background: linear-gradient(to bottom, transparent, #808080);
-}
-
-.left-col .first-content {
-  height: 100%;
-}
-
-.left-col .first-content .content-binary {
-  height: 50%;
-  display: inline-block;
-  font-family: monospace;
-  font-size: 16px;
-  background: linear-gradient(to right, #808080, transparent);
-  
-  color: transparent;
-}
-
-.left-col .first-content .content-binary-1 {
-  display: flex;
-  align-items: initial;
-  padding: 0px;
-}
-
-.left-col .first-content .content-binary-2 {
-  display: flex;
-  align-items: end;
-  padding: 0px;
-}
-
-.left-col .second-content {
-  height: 100%;
-}
-
-.left-col .second-content .content-icons {
-  display: flex;
-  height: 50%;
-  justify-content: center;
-  align-items: center;
-}
-
-.center-col {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.right-col .second-content {
-  height: 100%;
-}
-
-.right-col .second-content .content-binary {
-  height: 50%;
-  display: inline-block;
-  font-family: monospace;
-  font-size: 16px;
-  background: linear-gradient(to right, #808080, transparent);
-  
-  color: transparent;
-}
-
-.right-col .second-content .content-binary-1 {
-  display: flex;
-  align-items: initial;
-  padding: 0px;
-}
-
-.right-col .second-content .content-binary-2 {
-  display: flex;
-  align-items: end;
-  padding: 0px;
-}
-
-.right-col .first-content {
-  height: 100%;
-}
-
-.right-col .first-content .content-icons {
-  display: flex;
-  height: 50%;
-  justify-content: center; /* Centrado vertical */
-  align-items: center; /* Centrado horizontal */
-}
-
-.icon {
-  width: 100px;
-  height: 100px;
-  border: 7px solid #808080;
-  border-radius: 50%;
-  padding: 0px;
+.container-login {
+  display: none; /* Oculta las columnas y el contenido extra */
 }
 
 .body-login {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 400px; /* Cambia según lo necesites */
+  height: 230px; /* Cambia según lo necesites */
+  position: relative;
+  background-color: #3b4041;
   color: #fff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  z-index: 10; /* Asegura que esté por encima de container-login */
+  padding: 50px;
+  border-radius: 70px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), /* Efecto neón */
+              0px 0px 20px rgba(255, 255, 255, 0.6), 
+              0px 0px 30px rgba(255, 255, 255, 0.4);
+  border: 3px solid #ffffff; /* Cambia el grosor ajustando el valor */
+  z-index: 10;
+  margin-top: 11px;
 }
 
 .content-login .title {
@@ -225,25 +84,4 @@ body {
 .login-button {
   flex: 1;
   background-color: #00aaff;
-}
-
-.content-horizontal {
-  display: flex;
-  width: 90%;
-  justify-content: space-between;
-  margin: auto;
-}
-
-[class*="content-draw"] {
-  color: #808080;
-  font-weight: bold;
-  width: 40%;
-}
-
-.content-draw::before {
-  content: "O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O";
-}
-
-.content-draw-min::before {
-  content: "o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o o ";
 }
