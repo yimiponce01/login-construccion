@@ -9,10 +9,10 @@ function mostrarFormularioIngreso($mensaje){
     <label for="datusuario">Usuario</label>
         <input type="text" name="datusuario" id="datusuario">
     <br>
-    <label for="datpasword">password</label>
+    <label for="datpasword">Password</label>
         <input type="password" name="datpassword" id="datpassword">
     <br>
-    <label for="datperfil">perfil</label>
+    <label for="datperfil">Perfil</label>
         <input type="datperfil" name="datperfil" id="datperfil">
     <br>
     <button type="submit">registrar usuario</button>

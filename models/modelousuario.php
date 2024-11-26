@@ -20,8 +20,8 @@ class modelousuario{
 
     //debe aver un metodo para hacer insert
     public function insertarUsuario($username, $password, $perfil){
-        $query = $this->conexion->query('insert into usuarios(username,password,perfil) values(:username,:password,:perfil)');
-        //statement o sentencia
+        $query = 'INSERT INTO usuarios (username, password, perfil) VALUES (:username, :password, :perfil)';
+        $stmt = $this->conexion->prepare($query);        //statement o sentencia
         $stmt= $this->conexion->prepare($query);
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $password);

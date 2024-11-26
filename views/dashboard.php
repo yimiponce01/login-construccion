@@ -50,7 +50,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
                             echo "<iframe src='" . get_controllers("controladorusuario.php") . "' ></iframe>";
                             break;
                         case 'ingresar':
-                            echo "<iframe src='" . get_views(arg1: "ingresardatos.php") . "' ></iframe>";
+                            echo "<iframe src='" . get_controllers(arg1: "controladoringresarusuario.php") . "' ></iframe>";
                             break;
                         case 'modificar':
                             echo "<iframe src='" . get_views(arg1: "modificardatos.php") . "' ></iframe>";

@@ -99,10 +99,11 @@ form {
   align-items: center; /* Centra horizontalmente */
   width: 300px; /* Ancho fijo del formulario */
   margin: 0 auto; /* Centra el formulario en la página */
-  padding: 5px; /* Espaciado interno */
+  padding: 3px; /* Espaciado interno */
   background: none; /* Sin fondo */
   border: none; /* Sin bordes */
-  gap: 1.5rem; /* Espaciado entre los campos */
+  gap: 0.5rem; /* Espaciado entre los campos */
+  overflow: hidden;
 }
 
 /* Estilo de los labels */
