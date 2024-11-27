@@ -31,8 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <div style="display: block;margin: 0 auto;text-align: center; position: relative; top: 35%; transform: translateY(-50%);font-size: 0.5rem; overflow: hidden">
-    <h2 style="font-size: 2rem;"> Ingresar Usuario</h2>
+    
     <br>
     <!-- Vincula tu archivo CSS -->
     <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">

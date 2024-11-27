@@ -14,6 +14,8 @@ function mostrarUsuarios($usuarios)
             <th>Username</th>
             <th>Password</th>
             <th>Perfil</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
         </tr>
         <?php
         foreach ($usuarios as $usuario) 
@@ -24,6 +26,8 @@ function mostrarUsuarios($usuarios)
                 <td><?php echo $usuario['username'] ?></td>
                 <td><?php echo $usuario['password'] ?></td>
                 <td><?php echo $usuario['perfil'] ?></td>
+                <td> <a href= "#">editar</a></td>
+                <td> <a href="#">eliminar</a></td>
             </tr>
         <?php
         }

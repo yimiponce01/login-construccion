@@ -6,6 +6,8 @@ function mostrarFormularioIngreso($mensaje){
 ?>
 
 <form action="/controllers/controladoringresarusuario.php" method="POST">
+    <h2 style="font-size: 2rem;"> Ingresar Usuario</h2>
+    <br>
     <label for="datusuario">Usuario</label>
         <input type="text" name="datusuario" id="datusuario">
     <br>

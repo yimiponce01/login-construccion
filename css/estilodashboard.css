@@ -200,7 +200,7 @@ h2.titulo-tabla {
   margin: 0 auto; /* Centra la tabla horizontalmente */
   font-size: 1rem; /* Ajusta el tamaño del texto */
   text-align: center; /* Alinea el texto a la izquierda */
-  left: 190px;
+  left: 130px;
   position: relative;
 }
 
@@ -246,8 +246,6 @@ h2.titulo-tabla {
 .footer a:hover {
   color: #e6e6ff; /* Color al pasar el mouse */
 }
-
-
 
 
 
