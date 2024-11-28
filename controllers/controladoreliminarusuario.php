@@ -13,22 +13,31 @@ if (!isset($_SESSION["txtusername"])) {
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $tmpdatusuario = $_POST["datusuario"] ?? '';
 
-    if (!empty($tmpdatusuario)) {    
+    if (!empty($tmpdatusuario)) {
         $modelousuario = new modelousuario();
         try {
             // Eliminar usuario por nombre
             $modelousuario->eliminarusuariopornombre($tmpdatusuario);
 
-            // Notificación flotante
-            $mensaje = "Usuario eliminado con éxito.";
+            // Notificación flotante y redirección al iframe de "Ver"
+            echo "<script>
+            mostrarNotificacion('Usuario eliminado con éxito.', 'success');
+            setTimeout(function() {
+                parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
+            },);
+        </script>";
         } catch (PDOException $e) {
-            $mensaje = "Hubo un error al eliminar el usuario: " . $e->getMessage();
+            // Notificación de error
+            echo "<script>
+            mostrarNotificacion('Hubo un error al eliminar el usuario: {$e->getMessage()}', 'error');
+        </script>";
         }
     } else {
-        $mensaje = "Por favor, ingrese un nombre de usuario válido.";
+        // Notificación de datos inválidos
+        echo "<script>
+        mostrarNotificacion('Por favor, ingrese un nombre de usuario válido.', 'warning');
+    </script>";
     }
-
-    mostrarformularioeliminar($mensaje);
 
 } else {
     mostrarformularioeliminar();

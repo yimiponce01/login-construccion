@@ -293,4 +293,34 @@ a.editar:active {
   filter: drop-shadow(0 0 10px #0d47a1) drop-shadow(0 0 20px #3399ff); /* Brillo más intenso */
 }
 
+/* Notificación flotante */
+.notification {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* Oculto inicialmente */
+  transform: translateY(-30px); /* Animación al aparecer */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notification.success {
+  background-color: #4caf50; /* Verde para éxito */
+  color: #fff;
+}
+
+.notification.error {
+  background-color: #f44336; /* Rojo para error */
+  color: #fff;
+}
+
+.notification.warning {
+  background-color: #ff9800; /* Naranja para advertencia */
+  color: #fff;
+}
 

@@ -21,11 +21,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Inserción del usuario
             $modelousuario->insertarUsuario($tmpdatusuario, $tmpdatpassword, $tmpdatperfil);
-
+            
+            
             // Notificación de éxito
             echo "<script>
-                    mostrarNotificacion('Usuario registrado con éxito', 'success');
-                </script>";
+                mostrarNotificacion('Usuario registrado con éxito', 'success');
+                setTimeout(function() {
+                    parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
+                },);
+            </script>";
         } catch (PDOException $e) {
             // Notificación de error
             echo "<script>

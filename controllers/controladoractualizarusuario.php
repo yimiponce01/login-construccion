@@ -30,18 +30,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             try {
                 $modelousuario->actualizarusuarios($idUsuario, $username, $password, $perfil);
 
-                // Preparar notificación de éxito
-                $mensajeNotificacion = 'Usuario modificado con éxito';
-                $tipoNotificacion = 'success';
+                // Preparar notificación de éxito y redirección al iframe de "Ver"
+                echo "<script>
+                    mostrarNotificacion('Usuario modificado con éxito', 'success');
+                    setTimeout(function() {
+                    parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
+                    },);
+                    </script>";
             } catch (PDOException $e) {
                 // Preparar notificación de error
-                $mensajeNotificacion = 'Hubo un error al modificar el usuario: ' . $e->getMessage();
-                $tipoNotificacion = 'error';
+                echo "<script>
+                mostrarNotificacion('Hubo un error al modificar el usuario: {$e->getMessage()}', 'error');
+            </script>";
             }
         } else {
             // Preparar notificación de datos incompletos
-            $mensajeNotificacion = 'Datos incompletos para la modificación.';
-            $tipoNotificacion = 'error';
+            echo "<script>
+            mostrarNotificacion('Datos incompletos para la modificación.', 'error');
+        </script>";
         }
     } else {
         $tmpdatusuario = $_POST["datusuario"] ?? null;
@@ -63,9 +69,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
 </head>
+
 <body>
     <?php
     // Mostrar notificación flotante
@@ -78,4 +86,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     ?>
 </body>
+
 </html>

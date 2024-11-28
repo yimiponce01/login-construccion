@@ -1,5 +1,8 @@
 <div id="notification" class="notification hidden"></div>
 
+
+<div id="notification" class="notification hidden"></div>
+
 <script>
     function mostrarNotificacion(mensaje, tipo = 'success') {
         const notificacion = document.getElementById('notification');
