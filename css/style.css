@@ -33,17 +33,31 @@ body {
   margin-top: 11px;
 }
 
+
+
 .content-login .title {
   margin-top: -30px;
   display: flex;
   font-size: 40px;
-  transform: translateX(110px);
+  transform: translateX(135px);
+  font-family: 'Yeseva One', serif; /* Aplica la tipografía */
+  color: #ffffff ;
+  filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.8)) /* Azul brillante */
+        drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) /* Azul intermedio */
+        drop-shadow(0 0 30px rgba(0, 123, 255, 0.4)); /* Azul más suave */
+
+
 }
 
 .content-login .sub-title {
   display: flex;
   font-size: 25px;
   transform: translateX(5px);
+  font-family: 'Noto Serif Ahom', serif; /* Aplica la tipografía */
+  filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.8)) /* Azul brillante */
+        drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) /* Azul intermedio */
+        drop-shadow(0 0 30px rgba(0, 123, 255, 0.4)); /* Azul más suave */
+
 }
 
 .input-group {
@@ -52,20 +66,20 @@ body {
 }
 
 .input-group input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
+  margin-top: 8px;
+  border-radius: 15px;
   border: none;
   background-color: #555;
   color: #fff;
-  font-size: 16px;
+  font-size: 17px;
 }
 
 .toggle-password {
   position: absolute;
-  top: 56%;
-  left: 88%;
+  top: 68%;
+  left: 83%;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 18px; /* Tamaño del icono */
@@ -87,15 +101,55 @@ body {
   cursor: pointer;
 }
 
+:root {
+  --button-width: 90px; /* Ancho del botón */
+  --button-height: 40px; /* Altura del botón */
+  --button-radius: 10px; /* Bordes redondeados */
+  --remember-color: #000000; /* Color negro para remember-button */
+  --login-color: #00aaff; /* Color celeste para login-button */
+}
+
 .remember-button {
   flex: 1;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: var(--button-width);
+  height: var(--button-height);
+  background: var(--remember-color); /* Color negro */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: var(--button-radius); /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Muestra un cursor de puntero */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  transition: transform 0.3s, filter 0.3s; /* Animación suave al interactuar */
+}
+
+.remember-button:hover {
+  transform: translateY(-3px); /* Efecto de elevación */
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)); /* Efecto de neón blanco */
 }
 
 .login-button {
   flex: 1;
-  background-color: #00aaff;
+  width: var(--button-width);
+  height: var(--button-height);
+  background: var(--login-color); /* Color celeste */
+  color: white; /* Color del texto */
+  border: none; /* Sin bordes */
+  border-radius: var(--button-radius); /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Texto en negrita */
+  cursor: pointer; /* Muestra un cursor de puntero */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+  transition: transform 0.3s, filter 0.3s; /* Animación suave al interactuar */
 }
+
+.login-button:hover {
+  transform: translateY(-3px); /* Efecto de elevación */
+  filter: drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.8)); /* Efecto de neón celeste */
+}
+
+
 
 .linea-izquierda img {
   position: fixed;
@@ -109,4 +163,58 @@ body {
           drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
+
+.linea-derecha img {
+  position: fixed;
+  justify-content: center;
+  margin-top: -150px;
+  transform: translateX(596px);
+  width: 370px; /* Cambia este valor para ajustar el ancho */
+  height: 650px; /* Mantén la proporción original de la imagen */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  border-radius: 70px;
+}
+
+.candado img {
+  position: fixed;
+  justify-content: center;
+  margin-top: 280px;
+  transform: translateX(-208px);
+  width: 150px; /* Cambia este valor para ajustar el ancho */
+  height: 125px; /* Mantén la proporción original de la imagen */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  border-radius: 70px;
+}
+
+.tuerca img {
+  position: fixed;
+  justify-content: center;
+  margin-top: -153px;
+  transform: translateX(-199px);
+  width: 120px; /* Cambia este valor para ajustar el ancho */
+  height: 90px; /* Mantén la proporción original de la imagen */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  border-radius: 70px;
+}
+
+.boton img {
+  position: fixed;
+  justify-content: center;
+  margin-top: 89px;
+  transform: translateX(510px);
+  width: 90px; /* Cambia este valor para ajustar el ancho */
+  height: 80px; /* Mantén la proporción original de la imagen */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  border-radius: 70px;
+}
+
+
 

@@ -7,19 +7,35 @@
     <link rel="stylesheet" href="<?php echo get_UrlBase('./css/style.css'); ?>">
     <title>Login</title>
 </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif+Ahom&family=Patua+One&family=Shippori+Mincho&family=Sixtyfour+Convergence&display=swap');
+</style>
 
 <body>
-    
+
     <div class="body-login">
-    <div class="linea-izquierda">
-        <img src="<?php echo get_UrlBase('./img/lineaizquierda.png'); ?>" alt="Login Image">
-    </div>
+        <div class="linea-izquierda">
+            <img src="<?php echo get_UrlBase('./img/lineaizquierda.png'); ?>" alt="Login Image">
+        </div>
+        <div class="linea-derecha">
+            <img src="<?php echo get_UrlBase('./img/lineaderecha.png'); ?>" alt="Login Image">
+        </div>
+        <div class="candado">
+            <img src="<?php echo get_UrlBase('./img/candado.png'); ?>" alt="Login Image">
+        </div>
+        <div class="tuerca">
+            <img src="<?php echo get_UrlBase('./img/tuerca.png'); ?>" alt="Login Image">
+        </div>
+        <div class="boton">
+            <img src="<?php echo get_UrlBase('./img/boton.png'); ?>" alt="Login Image">
+        </div>
         <div class="content-login">
-            <span class="title">Logname</span>
+            <span class="title">LOGIN</span>
+            <br>
             <form action="/controllers/controladorlogin.php" method="POST">
                 <div class="sub-title">
                     <span>Username</span>
-                    <span>
+                    <span style="margin-left: 59px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */" >
                         <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -30,14 +46,14 @@
                                 fill="#1C274C" />
                         </svg>
                     </span>
-                    <span>Password</span>
+                    <span style="margin-left: 65px;">Password</span>
                 </div>
                 <div class="input-group">
                     <input type="text" id="txtusername" name="txtusername" placeholder="Username">
                 </div>
-                <div class="input-group">
+                <div class="input-group" >
                     <input type="password" id="txtpassword" name="txtpassword" placeholder="Password">
-                    <span class="toggle-password" onclick="togglePassword()">🧿</span>
+                    <span class="toggle-password"  onclick="togglePassword()">🧿</span>
                 </div>
 
                 <script>
