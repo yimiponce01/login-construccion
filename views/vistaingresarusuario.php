@@ -1,5 +1,5 @@
 <?php 
-
+include $_SERVER['DOCUMENT_ROOT'] . '/views/vistanotificacion.php';
 function mostrarFormularioIngreso($mensaje){
     if (empty($mensaje)){
 

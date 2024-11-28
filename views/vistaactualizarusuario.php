@@ -1,4 +1,5 @@
 <?php
+include $_SERVER['DOCUMENT_ROOT'] . '/views/vistanotificacion.php';
 function mostrarformulariobusqueda($mensaje = '')
 {
     if (!empty($mensaje)) {
@@ -9,6 +10,7 @@ function mostrarformulariobusqueda($mensaje = '')
 
     <head>
         <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
+        
     </head>
 
     <form action="/controllers/controladoractualizarusuario.php" method="POST">
@@ -43,7 +45,7 @@ function mostrarformularioedicion($usuario, $mensaje = '')
         <label for="datperfil">usuario</label>
         <input type="text" name="datperfil" id="datperfil" value="<?php echo $usuario['perfil'] ?>">
         <br>
-        <button type="submit">Modificar usuario</button>
+        <button type="submit">Actualizar usuario</button>
     </form>
     <?php
 }

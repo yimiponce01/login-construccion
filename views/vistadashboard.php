@@ -34,6 +34,17 @@
         </div>
     </main>
 
+    <?php
+if (isset($mensaje) && isset($tipo)) {
+    echo "<script>
+        document.addEventListener('DOMContentLoaded', function () {
+            mostrarNotificacion('$mensaje', '$tipo');
+        });
+    </script>";
+}
+?>
+
+
     <footer class="footer">
         <p>&copy; 2024 Mi Sitio Web. <a href="#">Términos y condiciones</a> | <a href="#">Autor: Yimi Kevin Ponce
                 Rojas</a></p>

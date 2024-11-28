@@ -248,7 +248,49 @@ h2.titulo-tabla {
 }
 
 
+/* Estilo para el enlace de eliminar con borde neón rojo */
+a.eliminar {
+  color: #ee0101; /* Texto blanco */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar el subrayado */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 14px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+  filter: drop-shadow(0 0 5px #f44336) drop-shadow(0 0 10px #ff5555); /* Borde neón */
+}
 
+a.eliminar:hover {
+  background-color: #d32f2f; /* Fondo rojo más oscuro */
+  filter: drop-shadow(0 0 8px #d32f2f) drop-shadow(0 0 15px #ff4444); /* Brillo más intenso */
+  transform: scale(1.1); /* Efecto de ampliación */
+}
 
+a.eliminar:active {
+  background-color: #b71c1c; /* Fondo rojo más oscuro */
+  filter: drop-shadow(0 0 10px #b71c1c) drop-shadow(0 0 20px #ff3333); /* Brillo más intenso */
+}
+/* Estilo para el enlace de editar con borde neón azul */
+a.editar {
+  color: #1207a1; /* Texto blanco */
+  padding: 8px 12px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-decoration: none; /* Quitar el subrayado */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 14px; /* Tamaño de la fuente */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+  filter: drop-shadow(0 0 5px #2196f3) drop-shadow(0 0 10px #33ccff); /* Borde neón */
+}
+
+a.editar:hover {
+  background-color: #1976d2; /* Fondo azul más oscuro */
+  filter: drop-shadow(0 0 8px #1976d2) drop-shadow(0 0 15px #33bbff); /* Brillo más intenso */
+  transform: scale(1.1); /* Efecto de ampliación */
+}
+
+a.editar:active {
+  background-color: #0d47a1; /* Fondo azul aún más oscuro */
+  filter: drop-shadow(0 0 10px #0d47a1) drop-shadow(0 0 20px #3399ff); /* Brillo más intenso */
+}
 
 

@@ -65,6 +65,29 @@ class modelousuario
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
+    //eliminar usuario con un boton por su id
+    public function eliminarUsuarioPorId($id)
+    {
+        $query = "DELETE FROM usuarios WHERE id = :id";
+        $stmt = $this->conexion->prepare($query);
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
+    //obtener usuario con un boton por su id
+    public function obtenerUsuarioPorId($id)
+{
+    $query = "SELECT * FROM usuarios WHERE id = :id";
+    $stmt = $this->conexion->prepare($query);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+
+
+
+
 }
 
 ?>

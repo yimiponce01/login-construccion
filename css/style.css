@@ -1,5 +1,5 @@
 body {
-  background: url('../img/fondologin.png') no-repeat center center fixed;
+  background: url("../img/fondologin.png") no-repeat center center fixed;
   background-size: 1550px 705px; /* Ajusta la imagen dentro del body, manteniendo proporciones */
   color: #fff;
   font-family: Arial, sans-serif;
@@ -13,7 +13,6 @@ body {
   padding: 0;
 }
 
-
 .container-login {
   display: none; /* Oculta las columnas y el contenido extra */
 }
@@ -26,9 +25,9 @@ body {
   color: #fff;
   padding: 50px;
   border-radius: 70px;
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8), /* Efecto neón */
-              0px 0px 20px rgba(255, 255, 255, 0.6), 
-              0px 0px 30px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8),
+    /* Efecto neón */ 0px 0px 20px rgba(255, 255, 255, 0.6),
+    0px 0px 30px rgba(255, 255, 255, 0.4);
   border: 3px solid #ffffff; /* Cambia el grosor ajustando el valor */
   z-index: 10;
   margin-top: 11px;
@@ -50,7 +49,6 @@ body {
 .input-group {
   margin-bottom: 15px;
   text-align: left;
-  
 }
 
 .input-group input {
@@ -66,8 +64,8 @@ body {
 
 .toggle-password {
   position: absolute;
-  top: 50%;
-  left: 97%;
+  top: 56%;
+  left: 88%;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 18px; /* Tamaño del icono */
@@ -98,3 +96,17 @@ body {
   flex: 1;
   background-color: #00aaff;
 }
+
+.linea-izquierda img {
+  position: fixed;
+  justify-content: center;
+  margin-top: -150px;
+  transform: translateX(-600px);
+  width: 495px; /* Cambia este valor para ajustar el ancho */
+  height: 650px; /* Mantén la proporción original de la imagen */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
+          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
+          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  border-radius: 70px;
+}
+
