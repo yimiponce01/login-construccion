@@ -1,4 +1,7 @@
 <?php
+
+include $_SERVER['DOCUMENT_ROOT'] . '/views/vistanotificacion.php';
+
 session_start();
 require_once $_SERVER['DOCUMENT_ROOT'] . '/models/modelousuario.php';
 
@@ -12,7 +15,7 @@ if (isset($_GET['id'])) {
     try {
         // Eliminar al usuario
         $modelousuario->eliminarUsuarioPorId($idUsuario);
-
+        
         // Obtener la lista actualizada de usuarios
         $usuarios = $modelousuario->obtenerusuarios(); // Asegúrate de tener este método en tu modelo
 

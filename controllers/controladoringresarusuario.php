@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // Notificación de éxito
             echo "<script>
-                mostrarNotificacion('Usuario registrado con éxito', 'success');
+                parent.mostrarNotificacion('Usuario registrado con éxito', 'success');
                 setTimeout(function() {
                     parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
                 },);

@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Notificación flotante y redirección al iframe de "Ver"
             echo "<script>
-            mostrarNotificacion('Usuario eliminado con éxito.', 'success');
+            parent.mostrarNotificacion('Usuario eliminado con éxito.', 'success');
             setTimeout(function() {
                 parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
             },);

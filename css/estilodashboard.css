@@ -293,7 +293,7 @@ a.editar:active {
   filter: drop-shadow(0 0 10px #0d47a1) drop-shadow(0 0 20px #3399ff); /* Brillo más intenso */
 }
 
-/* Notificación flotante */
+/* Estilo para la notificación flotante */
 .notification {
   position: fixed;
   top: 50px;
@@ -310,17 +310,28 @@ a.editar:active {
 }
 
 .notification.success {
-  background-color: #4caf50; /* Verde para éxito */
-  color: #fff;
+  background-color: #4caf50; /* Verde */
+  color: white;
+  top: 90px;
 }
 
 .notification.error {
-  background-color: #f44336; /* Rojo para error */
-  color: #fff;
+  background-color: #f44336; /* Rojo */
+  color: white;
+  top: 90px;
 }
 
 .notification.warning {
-  background-color: #ff9800; /* Naranja para advertencia */
-  color: #fff;
+  background-color: #ff9800; /* Naranja */
+  color: white;
+  top: 90px;
 }
+
+/* Mostrar la notificación */
+.notification.visible {
+  opacity: 1;
+  transform: translateY(0);
+  top: 90px;
+}
+
 

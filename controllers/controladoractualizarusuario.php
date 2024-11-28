@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 // Preparar notificación de éxito y redirección al iframe de "Ver"
                 echo "<script>
-                    mostrarNotificacion('Usuario modificado con éxito', 'success');
+                    parent.mostrarNotificacion('Usuario modificado con éxito', 'success');
                     setTimeout(function() {
                     parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
                     },);

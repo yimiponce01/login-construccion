@@ -1,4 +1,10 @@
+
+
+
 <?php
+
+include $_SERVER['DOCUMENT_ROOT'] . '/views/vistanotificacion.php';
+
 
 session_start();
 

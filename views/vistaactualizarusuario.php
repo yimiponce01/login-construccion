@@ -39,10 +39,10 @@ function mostrarformularioedicion($usuario, $mensaje = '')
         <label for="datusuario">Usuario</label>
         <input type="text" name="datusuario" id="datusuario" value="<?php echo $usuario['username'] ?>">
         <br>
-        <label for="datpasword">password</label>
+        <label for="datpasword">Password</label>
         <input type="password" name="datpassword" id="datpassword" value="<?php echo $usuario['password'] ?>">
         <br>
-        <label for="datperfil">usuario</label>
+        <label for="datperfil">Perfil</label>
         <input type="text" name="datperfil" id="datperfil" value="<?php echo $usuario['perfil'] ?>">
         <br>
         <button type="submit">Actualizar usuario</button>
