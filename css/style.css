@@ -32,6 +32,10 @@ body {
   z-index: 10;
   margin-top: 11px;
 }
+.body-login.extended {
+  height: 320px; /* Ajusta la altura cuando hay una notificación */
+  transition: height 0.3s ease-in-out; /* Transición suave */
+}
 
 
 
@@ -76,10 +80,14 @@ body {
   font-size: 17px;
 }
 
+.input-group {
+  position: relative; /* Esto asegura que el span esté posicionado relativo al contenedor */
+}
+
 .toggle-password {
   position: absolute;
-  top: 68%;
-  left: 83%;
+  top: 66%;
+  left: 90%;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 18px; /* Tamaño del icono */
@@ -215,6 +223,28 @@ body {
           drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
+
+.notification-error {
+  
+  color: white; /* Texto blanco */
+  text-align: center;
+  padding: 10px 15px; /* Espaciado interno */
+  margin: 15px 0; /* Espaciado superior e inferior */
+  border-radius: 8px; /* Bordes redondeados */
+  font-family: 'Arial', sans-serif;
+  font-size: 14px; /* Tamaño de la fuente */
+  font-weight: bold; /* Texto en negrita */
+  text-decoration: none; /* Quitar subrayado */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+  filter: drop-shadow(0 0 5px #f44336) drop-shadow(0 0 10px #ff5555); /* Efecto neón */
+}
+
+
+.notification-error:active {
+  background-color: #b71c1c; /* Fondo rojo más oscuro */
+  filter: drop-shadow(0 0 10px #b71c1c) drop-shadow(0 0 20px #ff3333); /* Brillo más intenso */
+}
+
 
 
 

@@ -9,6 +9,9 @@ if (isset($_SESSION["txtusername"])) {
     exit;
 }
 
+$mensajeNotificacion = ''; // Variable para notificación
+$claveIncorrecta = false; // Indicador para error de clave
+
 // Manejo de la solicitud POST (inicio de sesión)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $v_username = isset($_POST["txtusername"]) ? $_POST["txtusername"] : '';
@@ -22,12 +25,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header('Location: ' . get_controllers('controladordashboard.php'));
         exit;
     } else {
-        // Redirigir a la vista de error de credenciales
-        header('Location: ' . get_views('claveequivocada.php'));
-        exit;
+        // Configurar mensaje de error y activar indicador
+        $mensajeNotificacion = 'Clave incorrecta. Por favor, inténtelo de nuevo.';
+        $claveIncorrecta = true;
     }
 }
 
-// Si no hay solicitud POST, renderizar la vista de inicio de sesión
+// Renderizar la vista de inicio de sesión
 require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistalogin.php';
 ?>

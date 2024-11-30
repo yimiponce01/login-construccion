@@ -8,12 +8,12 @@
     <title>Login</title>
 </head>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif+Ahom&family=Patua+One&family=Shippori+Mincho&family=Sixtyfour+Convergence&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif+Ahom&family=Patua+One&family=Shippori+Mincho&family=Sixtyfour+Convergence&display=swap');
 </style>
 
 <body>
 
-    <div class="body-login">
+    <div class="body-login <?php echo !empty($mensajeNotificacion) ? 'extended' : ''; ?>">
         <div class="linea-izquierda">
             <img src="<?php echo get_UrlBase('./img/lineaizquierda.png'); ?>" alt="Login Image">
         </div>
@@ -35,7 +35,9 @@
             <form action="/controllers/controladorlogin.php" method="POST">
                 <div class="sub-title">
                     <span>Username</span>
-                    <span style="margin-left: 59px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */" >
+                    <span
+                        style="margin-left: 59px; filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */">
+                        
                         <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -45,6 +47,7 @@
                                 d="M10.6089 14.4518C10.2187 14.1371 9.86294 13.7813 9.54824 13.3911L2.96967 19.9697C2.67678 20.2626 2.67678 20.7375 2.96967 21.0303C3.26256 21.3232 3.73744 21.3232 4.03033 21.0303L4.5 20.5607L5.46967 21.5303C5.76256 21.8232 6.23744 21.8232 6.53033 21.5303C6.82322 21.2375 6.82322 20.7626 6.53033 20.4697L5.56066 19.5L6.5 18.5607L7.46967 19.5303C7.76256 19.8232 8.23744 19.8232 8.53033 19.5303C8.82322 19.2375 8.82322 18.7626 8.53033 18.4697L7.56066 17.5L10.6089 14.4518Z"
                                 fill="#1C274C" />
                         </svg>
+                        
                     </span>
                     <span style="margin-left: 65px;">Password</span>
                 </div>
@@ -63,6 +66,13 @@
                     }
                 </script>
 
+                <!-- Notificación de error -->
+                <?php if (!empty($mensajeNotificacion)): ?>
+                    <div class="notification-error">
+                        <?php echo $mensajeNotificacion; ?>
+                    </div>
+                <?php endif; ?>
+
                 <div class="group-buttons">
                     <button class="remember-button" type="button">Remember</button>
                     <button class="login-button" type="submit">Login</button>
@@ -70,6 +80,7 @@
             </form>
         </div>
     </div>
+
 </body>
 
 </html>
