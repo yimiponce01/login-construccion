@@ -1,5 +1,9 @@
 <?php
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/models/modelousuario.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistabotoneditar.php';
 

@@ -1,5 +1,9 @@
 <?php
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 // Verifica si hay un mensaje de notificación en la sesión
 if (isset($_SESSION['notificacion'])) {

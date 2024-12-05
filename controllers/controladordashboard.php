@@ -5,8 +5,9 @@
 
 include $_SERVER['DOCUMENT_ROOT'] . '/views/vistanotificacion.php';
 
-
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
 
@@ -16,29 +17,35 @@ if (!isset($_SESSION["txtusername"])) {
     exit;
 }
 
-class Controladordashboard
-{
-    public static function handleRequest($opcion)
-    {
+
+$opcion = $_GET["opcion"] ?? "ver";
         switch ($opcion) {
             case 'ver':
-                return get_controllers("controladorusuario.php");
+                ob_start();
+                include  get_controllers_disk("controladorusuario.php");
+                $contenido = ob_get_clean();
+                break;
             case 'ingresar':
-                return get_controllers("controladoringresarusuario.php");
+                ob_start();
+                include  get_controllers_disk("controladoringresarusuario.php");
+                $contenido = ob_get_clean();
+                break;
             case 'modificar':
-                return get_controllers("controladoractualizarusuario.php");
+                ob_start();
+                include  get_controllers_disk("controladoractualizarusuario.php");
+                $contenido = ob_get_clean();
+                break;
             case 'eliminar':
-                return get_controllers("controladoreliminarusuario.php");
+                ob_start();
+                include  get_controllers_disk("controladoreliminarusuario.php");
+                $contenido = ob_get_clean();
+                break;
             default:
                 return null;
         }
-    }
-}
 
-// Obtener la opción seleccionada y la URL del iframe
-$iframeSrc = null;
-if (isset($_GET["opcion"])) {
-    $iframeSrc = Controladordashboard::handleRequest($_GET["opcion"]);
-}
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistadashboard.php';
+
+include get_views_disk('vistadashboard.php');
+
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistadashboard.php';

@@ -37,31 +37,26 @@ body {
   transition: height 0.3s ease-in-out; /* Transición suave */
 }
 
-
-
 .content-login .title {
   margin-top: -30px;
   display: flex;
   font-size: 40px;
   transform: translateX(135px);
-  font-family: 'Yeseva One', serif; /* Aplica la tipografía */
-  color: #ffffff ;
+  font-family: "Yeseva One", serif; /* Aplica la tipografía */
+  color: #ffffff;
   filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.8)) /* Azul brillante */
-        drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) /* Azul intermedio */
-        drop-shadow(0 0 30px rgba(0, 123, 255, 0.4)); /* Azul más suave */
-
-
+    drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) /* Azul intermedio */
+    drop-shadow(0 0 30px rgba(0, 123, 255, 0.4)); /* Azul más suave */
 }
 
 .content-login .sub-title {
   display: flex;
   font-size: 25px;
   transform: translateX(5px);
-  font-family: 'Noto Serif Ahom', serif; /* Aplica la tipografía */
+  font-family: "Noto Serif Ahom", serif; /* Aplica la tipografía */
   filter: drop-shadow(0 0 10px rgba(0, 123, 255, 0.8)) /* Azul brillante */
-        drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) /* Azul intermedio */
-        drop-shadow(0 0 30px rgba(0, 123, 255, 0.4)); /* Azul más suave */
-
+  drop-shadow(0 0 20px rgba(0, 123, 255, 0.6)) /* Azul intermedio */
+  drop-shadow(0 0 30px rgba(0, 123, 255, 0.4)); /* Azul más suave */
 }
 
 .input-group {
@@ -86,8 +81,8 @@ body {
 
 .toggle-password {
   position: absolute;
-  top: 66%;
-  left: 90%;
+  top: 60%;
+  left: 91%;
   transform: translateY(-50%);
   cursor: pointer;
   font-size: 18px; /* Tamaño del icono */
@@ -134,7 +129,9 @@ body {
 
 .remember-button:hover {
   transform: translateY(-3px); /* Efecto de elevación */
-  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.8)); /* Efecto de neón blanco */
+  filter: drop-shadow(
+    0px 0px 10px rgba(255, 255, 255, 0.8)
+  ); /* Efecto de neón blanco */
 }
 
 .login-button {
@@ -154,10 +151,10 @@ body {
 
 .login-button:hover {
   transform: translateY(-3px); /* Efecto de elevación */
-  filter: drop-shadow(0px 0px 10px rgba(0, 255, 255, 0.8)); /* Efecto de neón celeste */
+  filter: drop-shadow(
+    0px 0px 10px rgba(0, 255, 255, 0.8)
+  ); /* Efecto de neón celeste */
 }
-
-
 
 .linea-izquierda img {
   position: fixed;
@@ -166,9 +163,9 @@ body {
   transform: translateX(-600px);
   width: 495px; /* Cambia este valor para ajustar el ancho */
   height: 650px; /* Mantén la proporción original de la imagen */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
-          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
 
@@ -179,9 +176,9 @@ body {
   transform: translateX(596px);
   width: 370px; /* Cambia este valor para ajustar el ancho */
   height: 650px; /* Mantén la proporción original de la imagen */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
-          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
 
@@ -192,9 +189,9 @@ body {
   transform: translateX(-208px);
   width: 150px; /* Cambia este valor para ajustar el ancho */
   height: 125px; /* Mantén la proporción original de la imagen */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
-          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
 
@@ -205,9 +202,9 @@ body {
   transform: translateX(-199px);
   width: 120px; /* Cambia este valor para ajustar el ancho */
   height: 90px; /* Mantén la proporción original de la imagen */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
-          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
 
@@ -218,20 +215,19 @@ body {
   transform: translateX(510px);
   width: 90px; /* Cambia este valor para ajustar el ancho */
   height: 80px; /* Mantén la proporción original de la imagen */
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8)) 
-          drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) 
-          drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8))
+    drop-shadow(0 0 20px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 30px rgba(255, 255, 255, 0.4)); /* Efecto de neón */
   border-radius: 70px;
 }
 
 .notification-error {
-  
   color: white; /* Texto blanco */
   text-align: center;
   padding: 10px 15px; /* Espaciado interno */
   margin: 15px 0; /* Espaciado superior e inferior */
   border-radius: 8px; /* Bordes redondeados */
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 14px; /* Tamaño de la fuente */
   font-weight: bold; /* Texto en negrita */
   text-decoration: none; /* Quitar subrayado */
@@ -239,12 +235,7 @@ body {
   filter: drop-shadow(0 0 5px #f44336) drop-shadow(0 0 10px #ff5555); /* Efecto neón */
 }
 
-
 .notification-error:active {
   background-color: #b71c1c; /* Fondo rojo más oscuro */
   filter: drop-shadow(0 0 10px #b71c1c) drop-shadow(0 0 20px #ff3333); /* Brillo más intenso */
 }
-
-
-
-

@@ -1,7 +1,10 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/etc/config.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/models/connect/conexion.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/models/modelousuario.php';
 
 // Verifica si la sesión ya está iniciada
 if (isset($_SESSION["txtusername"])) {
@@ -17,12 +20,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $v_username = isset($_POST["txtusername"]) ? $_POST["txtusername"] : '';
     $v_password = isset($_POST["txtpassword"]) ? $_POST["txtpassword"] : '';
 
-    if ($v_username === "admin" && $v_password === "1234") {
+    $modelousuario = new modelousuario();
+    $credenciales = $modelousuario->ValidarUsuario($v_username, $v_password);
+
+    if ($credenciales) {
         $_SESSION["txtusername"] = $v_username;
         $_SESSION["txtpassword"] = $v_password;
 
-        // Redirigir al dashboard
-        header('Location: ' . get_controllers('controladordashboard.php'));
+        // Adecuar javascript
+        echo '<script>
+                window.onload = function() {
+                    redirectToDashboard();
+                };
+                function redirectToDashboard() {
+                    window.location.href = "controladordashboard.php";
+                }
+              </script>';
         exit;
     } else {
         // Configurar mensaje de error y activar indicador
@@ -31,6 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+include get_views_disk('vistalogin.php');
 // Renderizar la vista de inicio de sesión
-require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistalogin.php';
+//require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistalogin.php';
 ?>
+
+<script>
+    
+</script>
+

@@ -1,12 +1,9 @@
-<head>
-    <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css') ?>">
-</head>
 
 <?php
 function mostrarUsuarios($usuarios)
 {
     ?>
-    <div style="display: block;">
+    <div>
         <h2 class="titulo-tabla">Lista de Usuarios del Sistema</h2>
         <div class="tabla-usuarios">
             <table class="user-table">
@@ -39,9 +36,7 @@ function mostrarUsuarios($usuarios)
         </table>
     </div>
 
-    <head>
-        <link rel="stylesheet" href="<?php echo get_UrlBase('./css/estilodashboard.css'); ?>">
-    </head>
+    
     <script>
 
         function eliminarUsuario(id) {

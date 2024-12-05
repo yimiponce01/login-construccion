@@ -2,7 +2,11 @@
 
 include $_SERVER['DOCUMENT_ROOT'] . '/views/vistanotificacion.php';
 
-session_start();
+
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once $_SERVER['DOCUMENT_ROOT'] . '/models/modelousuario.php';
 
 echo "<link rel='stylesheet' href='" . get_UrlBase('./css/estilodashboard.css') . "'>";

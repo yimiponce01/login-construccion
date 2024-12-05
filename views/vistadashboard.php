@@ -26,11 +26,14 @@
 
     <main class="content">
         <div class="contenido">
-            <?php if (isset($iframeSrc) && !empty($iframeSrc)): ?>
-                <iframe src="<?php echo $iframeSrc; ?>" style="width: 100%; height: 600px; border: none;"></iframe>
-            <?php else: ?>
-                <p>¡Bienvenido! Seleccione una opción del menú para comenzar.</p>
-            <?php endif; ?>
+            <?php
+            if (isset($contenido)){
+                echo $contenido;
+            }else{
+                echo "<h1> SISTEMA DE YIMI K.P.R </h1> ";
+            }
+            ?>
+            
         </div>
     </main>
 

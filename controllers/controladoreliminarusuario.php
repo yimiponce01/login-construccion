@@ -1,6 +1,9 @@
 <?php
 
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/models/modelousuario.php';
 require_once $_SERVER['DOCUMENT_ROOT'] . '/views/vistaeliminarusuario.php';
@@ -23,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<script>
             parent.mostrarNotificacion('Usuario eliminado con éxito.', 'success');
             setTimeout(function() {
-                parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
+            parent.document.querySelector('iframe').src = '/controllers/controladorusuario.php';
             },);
         </script>";
         } catch (PDOException $e) {

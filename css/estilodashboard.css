@@ -188,7 +188,7 @@ h2.titulo-tabla {
   text-align: center;
   font-size: 2rem; /* Tamaño de fuente más grande */
   font-weight: bold; /* Negrita */
-  left: 260px;
+  left: 100px;
   position: relative;
   color: #000000; /* Azul oscuro */
   margin-bottom: 30px; /* Espacio debajo del título */
@@ -200,8 +200,6 @@ h2.titulo-tabla {
   margin: 0 auto; /* Centra la tabla horizontalmente */
   font-size: 1rem; /* Ajusta el tamaño del texto */
   text-align: center; /* Alinea el texto a la izquierda */
-  left: 130px;
-  position: relative;
 }
 
 .user-table th,
